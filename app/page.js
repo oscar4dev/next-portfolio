@@ -57,7 +57,7 @@ export default function page() {
               Global Collaboration
             </span>
             <p>
-              Throughout my learning journey, I've
+              Throughout my learning journey, I&apos;ve
               collaborated with large specialized teams
               across diverse time zones, refining my working
               style to prioritize flexibility, clarity, and
@@ -68,19 +68,19 @@ export default function page() {
           <p className='mt-8'>
             With 2+ years of experience, I specialize in 
             building scalable and high-performance web 
-            applications using React and Next.js. I'm passionate about 
+            applications using React and Next.js. I&apos;m passionate about 
             crafting intuitive user interfaces and 
             delivering exceptional results.
             Some of my technical skills and relevant soft 
             skills include Problem-solving, Communication, Teamwork, 
             etc. Dedicated to delivering excellence, 
             I offer a comprehensive range of services 
-            tailored to your needs. Whether it's a quick 
+            tailored to your needs. Whether it&apos;s a quick 
             one-hour task, ongoing daily support, or a 
-            long-term partnership, I'm committed to 
+            long-term partnership, I&apos;m committed to 
             providing meticulous attention to detail and 
-            exceptional results. I'm eager to discuss how 
-            I can contribute to your project's success.
+            exceptional results. I&apos;m eager to discuss how 
+            I can contribute to your project&apos;s success.
           </p>
 
           <p className='mt-8'>
@@ -158,9 +158,9 @@ export default function page() {
           </p>
 
           <p className='mt-8'>
-            Thank you for visiting my profile. I'm eager 
+            Thank you for visiting my profile. I&apos;m eager 
             to discuss how I can contribute to your 
-            project's success.
+            project&apos;s success.
           </p>
         </div>
 
