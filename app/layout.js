@@ -1,16 +1,10 @@
-import localFont from "next/font/local";
 import "./globals.css";
+import { Josefin_Sans } from "next/font/google";
+import Header from "./ui/Header";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const josefin = Josefin_Sans({
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -18,12 +12,21 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ josefin.className } antialiased`}
       >
-        {children}
+        <div className="min-h-dvh flex flex-col">
+          <header className="z-10 bg-indigo-500 h-14 flex items-end p-2 fixed w-full">
+            <Header />
+          </header>
+
+          <main className="flex-1 pt-14 dark:bg-slate-900 dark:text-slate-50">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );

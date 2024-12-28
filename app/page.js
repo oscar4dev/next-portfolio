@@ -1,101 +1,175 @@
-import Image from "next/image";
+import PageNavigation from './ui/PageNavigation'
+import Link from 'next/link'
+import { FaReact } from "react-icons/fa";
+import { SiRedux } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { SiSupabase } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
+import Footer from './ui/Footer';
+import ScrollIndicator from './ui/ScrollIndicator';
+import ScrollToTop from './ui/ScrollToTop';
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+export default function page() {
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    return (
+      <div className=''>
+      <div className='fixed w-full z-10 top-14'>
+        <ScrollIndicator />
+      </div>
+
+      <main className='lg:max-w-[1024px] lg:mx-auto'>
+        <div className=''>
+          <PageNavigation />
         </div>
+
+        <div className='p-4'>
+          <p className='mt-4'>
+            I am a web developer with special interest in 
+            React + Next.js. I try to keep up with security and best 
+            practices, and I am always looking for new 
+            things to learn.
+          </p>
+
+          <div className='mt-8 space-y-2'>
+            <span className='font-bold text-lg'>
+              Next.js Specialist
+            </span>
+            <p>
+              My special interest in Next.js extends my
+              capabilities in developing dynamic and
+              efficient web applications.
+            </p>
+          </div>
+
+          <div className='mt-8 space-y-2'>
+            <span className='font-bold text-lg'>
+              User-Friendly Solutions
+            </span>
+            <p>
+              I thrive on creating tools that prioritize
+              user-friendliness, simplicity, and a
+              delightful experience.
+            </p>
+          </div>
+
+          <div className='mt-8 space-y-2'>
+            <span className='font-bold text-lg'>
+              Global Collaboration
+            </span>
+            <p>
+              Throughout my learning journey, I've
+              collaborated with large specialized teams
+              across diverse time zones, refining my working
+              style to prioritize flexibility, clarity, and
+              effective collaboration.
+            </p>
+          </div>
+
+          <p className='mt-8'>
+            With 2+ years of experience, I specialize in 
+            building scalable and high-performance web 
+            applications using React and Next.js. I'm passionate about 
+            crafting intuitive user interfaces and 
+            delivering exceptional results.
+            Some of my technical skills and relevant soft 
+            skills include Problem-solving, Communication, Teamwork, 
+            etc. Dedicated to delivering excellence, 
+            I offer a comprehensive range of services 
+            tailored to your needs. Whether it's a quick 
+            one-hour task, ongoing daily support, or a 
+            long-term partnership, I'm committed to 
+            providing meticulous attention to detail and 
+            exceptional results. I'm eager to discuss how 
+            I can contribute to your project's success.
+          </p>
+
+          <p className='mt-8'>
+            Here is a 
+            <Link 
+              href={ 'https://v1.scrimba.com/certificate/uwqg4kur/gfrontend' }
+              className='mx-1 text-blue-500 underline'
+            >certificate</Link> 
+            I got from 
+            <Link 
+              href={ 'https://scrimba.com/home' }
+              className='mx-1 text-blue-500 underline'
+            >Scrimba</Link> 
+            after completing the Frontend Developer 
+            Career Path.
+          </p>
+
+          <p className='mt-8'>
+            Here is a 
+            <Link 
+              className='text-blue-500 mx-1 underline'
+              href={ 'https://www.udemy.com/certificate/UC-7637e3af-fb05-4219-ba9f-c3c7753c7760/' }
+            >certificate</Link> 
+            I got from  
+            <Link 
+              href={ 'https://www.udemy.com/course/the-ultimate-react-course/' }
+              className='mx-1 text-blue-500 underline'
+            >Udemy</Link>
+            after completing the Ultimate React Course 
+            created by Jonas Schmedtmann.
+          </p>
+
+          <ul className='mt-8'>
+            <p className='mb-2'>
+              These are a few of the technologies that I 
+              utilize...
+            </p>
+            <li className='flex items-center gap-2 mb-1'>
+              <span><FaReact /></span>
+              <span>React</span>
+            </li>
+            <li className='flex items-center gap-2 mb-1'>
+              <span><SiRedux /></span>
+              <span>Redux Toolkit</span>
+            </li>
+            <li className='flex items-center gap-2 mb-1'>
+              <span><SiTailwindcss /></span>
+              <span>TailwindCSS</span>
+            </li>
+            <li className='flex items-center gap-2 mb-1'>
+              <span><SiSupabase /></span>
+              <span>Supabase</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <span><RiNextjsFill /></span>
+              <span>Next.js</span>
+            </li>
+          </ul>
+
+          <p className='mt-8'>
+            These are a few of the 
+            <Link 
+              href={ '/projects' }
+              className='bg-indigo-200 text-slate-0 text-sm p-1 mx-1 hover:underline dark:bg-slate-700'
+            >projects</Link> 
+            I am currently working on.
+          </p>
+
+          <p>
+            You can 
+            <Link 
+              href={ '/contact' }
+              className='bg-indigo-200 text-sm p-1 mx-1 hover:underline dark:bg-slate-700'
+            >contact me here.</Link>
+          </p>
+
+          <p className='mt-8'>
+            Thank you for visiting my profile. I'm eager 
+            to discuss how I can contribute to your 
+            project's success.
+          </p>
+        </div>
+
+        <div className='fixed bottom-5 right-2'>
+          <ScrollToTop />
+        </div>
+
+        <Footer />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </div>
+    )
 }
